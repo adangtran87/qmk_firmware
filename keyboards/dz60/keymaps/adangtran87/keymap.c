@@ -1,6 +1,9 @@
 #include "dz60.h"
 
-#define MODS_CTRL_MASK  (MOD_BIT(KC_LSHIFT)|MOD_BIT(KC_RSHIFT))
+// Layer Definitions
+#define _BASE 0
+#define _NAVI 1
+#define _PROG 2
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -14,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Navigation and Utility Keys */
   LAYOUT(
-    KC_NO,  KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,  KC_F6,    KC_F7,    KC_F8,   KC_F9,     KC_F10,   KC_F11,  KC_F12,  KC_NO,  KC_NO,
+    KC_NO,  KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,  KC_F6,    KC_F7,    KC_F8,   KC_F9,     KC_F10,   KC_F11,  KC_F12,  KC_NO,  RGB_TOG,
     KC_NO,  KC_NO,    KC_VOLU,  KC_PGUP,  KC_NO,   KC_NO,  KC_NO,    KC_NO,    KC_INS,  KC_NO,     KC_PSCR,  KC_NO,   KC_NO,   KC_NO,
     KC_NO,  KC_HOME,  KC_VOLD,  KC_PGDN,  KC_END,  KC_NO,  KC_LEFT,  KC_DOWN,  KC_UP,   KC_RIGHT,  KC_NO,    KC_NO,   KC_NO,
     KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,  KC_NO,    KC_NO,    KC_NO,   KC_NO,     KC_NO,    KC_NO,   KC_NO,   KC_NO,
@@ -29,3 +32,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,   KC_NO),
 
 };
+
+uint32_t layer_state_set_user(uint32_t state) {
+  switch (biton32(state)) {
+    case _PROG:
+      rgblight_sethsv_coral();
+      break;
+
+    case _NAVI:
+      rgblight_sethsv_teal();
+      break;
+
+    default:
+      rgblight_sethsv_white();
+      break;
+  }
+  return state;
+}
