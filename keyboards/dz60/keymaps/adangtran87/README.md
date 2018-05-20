@@ -10,6 +10,10 @@ Highlights:
   * Capslock key is for Control when held and ESC when tapped
   * HJKL navigation
 
+Notes:
+
+* Code blocks contain keyboard-layout-editor json
+
 # Layout
 
 Empty physical layout:
@@ -22,8 +26,9 @@ Empty physical layout:
 
 ## Default Layer
 
-The traditional capslock location is switched for `Control` when held and `ESC`
-when tapped. Backspace is moved to layer 1
+* The traditional capslock location is switched for `Control` when held and
+  `ESC` when tapped.
+* Backspace is middle spacebar when tapped, FN2 when held.
 
     ["~\n`","!\n1","@\n2","#\n3","$\n4","%\n5","^\n6","&\n7","*\n8","(\n9",")\n0","_\n-","+\n=",{a:7},"",""],
     [{a:4,w:1.5},"Tab","Q","W","E","R","T","Y","U","I","O","P","{\n[","}\n]",{w:1.5},"|\n\\"],
@@ -42,5 +47,17 @@ Navigation and Utility Layer
     [{w:1.25},"",{w:1.25},"",{w:1.25},"",{c:"#303030",w:2.25},"",{c:"#cccccc",w:1.25},"Del",{w:2.75},"",{w:1.25},"",{w:1.25},"",{w:1.25},"",{w:1.25},""]
 
 ## FN2 Layer
+
+Coding and VIM layer
+
+* Symbols aside from !@# remapped towards the middle
+* ^,$ remapped for VIM Movement
+
+    [{a:7},"","","","","","","","","","","","","","",""],
+    [{w:1.5},"","","","","{","","","}","","","","","",{w:1.5},""],
+    [{w:1.75},"","^","","","(","*","&",")","","$","","",{w:2.25},""],
+    [{w:2.25},"","","","","[","%","]","","","","",{w:1.75},"",""],
+    [{w:1.25},"",{w:1.25},"",{w:1.25},"",{w:2.25},"",{c:"#303030",w:1.25},"",{c:"#cccccc",w:2.75},"",{w:1.25},"",{w:1.25},"",{w:1.25},"",{w:1.25},""]
+
 
 ## FN3 Layer
