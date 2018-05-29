@@ -20,17 +20,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   LAYOUT(
     KC_NO,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,  KC_F6,    KC_F7,    KC_F8,   KC_F9,     KC_F10,   KC_F11,  KC_F12,  KC_NO,  RGB_TOG,
     KC_NO,  KC_NO,    KC_NO,    KC_PGUP,  KC_AGAIN, KC_NO,  KC_NO,    KC_NO,    KC_INS,  KC_NO,     KC_PSCR,  KC_NO,   KC_NO,   KC_NO,
-    KC_NO,  KC_HOME,  KC_NO,    KC_PGDN,  KC_END,   KC_NO,  KC_LEFT,  KC_DOWN,  KC_UP,   KC_RIGHT,  KC_NO,    KC_NO,   KC_NO,
-    KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,    KC_NO,    KC_NO,   KC_NO,     KC_NO,    KC_NO,   KC_NO,   KC_NO,
-    KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_DEL,   KC_NO,  KC_NO,    KC_NO,    KC_NO,   KC_NO,     KC_NO),
+    KC_TRNS,  KC_HOME,  KC_NO,    KC_PGDN,  KC_END,   KC_NO,  KC_LEFT,  KC_DOWN,  KC_UP,   KC_RIGHT,  KC_NO,    KC_NO,   KC_NO,
+    KC_TRNS,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,    KC_NO,    KC_NO,   KC_NO,     KC_NO,    KC_NO,   KC_NO,   KC_NO,
+    KC_NO,  KC_NO,    KC_TRNS,    KC_NO,    KC_DEL,   KC_NO,  KC_NO,    KC_NO,    KC_NO,   KC_NO,     KC_NO),
 
   /* Coding/VIM Layer */
   LAYOUT(
     KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,  KC_NO,
     KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_LCBR,  KC_NO,    KC_NO,    KC_RCBR,  KC_NO,  KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,
-    KC_NO,  KC_CIRC,  KC_NO,  KC_NO,  KC_LPRN,  KC_ASTR,  KC_AMPR,  KC_RPRN,  KC_NO,  KC_DLR,  KC_NO,   KC_NO,  KC_NO,
-    KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_NO,    KC_LBRC,  KC_PERC,  KC_RBRC,  KC_NO,  KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,
-    KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,   KC_NO),
+    KC_TRNS,  KC_CIRC,  KC_NO,  KC_NO,  KC_LPRN,  KC_ASTR,  KC_AMPR,  KC_RPRN,  KC_NO,  KC_DLR,  KC_NO,   KC_NO,  KC_NO,
+    KC_TRNS,  KC_NO,    KC_NO,  KC_NO,  KC_NO,    KC_LBRC,  KC_PERC,  KC_RBRC,  KC_NO,  KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,
+    KC_NO,  KC_NO,    KC_TRNS,  KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,  KC_NO,   KC_NO),
 
   /* System Layer */
   LAYOUT(
